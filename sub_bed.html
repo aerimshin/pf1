@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liroom category_bed</title>
+    <link href="css/sub_bed.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $('.gnb>ul>li').on({//gnb ,+none
+                mouseenter:function(){$(this).find('.gnb_inner').stop().slideDown(300)},
+                mouseleave:function(){$(this).find('.gnb_inner').stop().slideUp(300)},
+                focusin:function(){$(this).find('.gnb_inner').stop().slideDown(300)},
+                focusout:function(){$(this).find('.gnb_inner').stop().slideUp(300)}
+            })
+
+            $('.fix_icon .open').click(function(){
+                $('#fix .slide').animate({right:0})
+            })
+            $('.slide .delete').click(function(){
+                $('#fix .slide').animate({right:'-20%'})
+            })
+            //fix,top
+            $('.top_btn').click(function(){
+                $('#header').animate({scrollTop:0},'100')
+            })
+
+            var proNum
+            $('.pro_name>li').click(function(){
+                proNum=$(this).attr('data-class')
+                $('.pro_list>li').css('display','none')
+                $('.bed').css('display','block')
+                $(this).addClass('select').siblings().removeClass('select')
+               
+            })
+            $('.tab_title>li>a').click(function(){
+                    event.preventDefault()
+            })
+            $('.pro_inven>li').click(function(){
+                proNum=$(this).attr('data-class')
+                $('.pro_list>li').css('display','none')
+                $('.inven').css('display','block')
+                $(this).addClass('select').siblings().removeClass('select')
+               
+            })
+        })
+        
+    </script>
+</head>
+<body>
+    <? include("header.html");?>
+    <section id="banner">
+        <h2>BED ROOM</h2>
+    </section>
+    <section id="liroom_series">
+        <h2>ilroom's SERIES</h2>
+        <div class="img_wrap">
+            <ul class="series_list">
+                <li><img src="img/series0.png" alt=""></li>
+                <li><img src="img/series1.png" alt=""></li>
+                <li><img src="img/series2.png" alt=""></li>
+                <li><img src="img/series3.png" alt=""></li>
+                <li><img src="img/series4.png" alt=""></li>
+                <li><img src="img/series5.png" alt=""></li>
+                <li><img src="img/series6.png" alt=""></li>
+                <li><img src="img/series7.png" alt=""></li>
+                <li><img src="img/series8.png" alt=""></li>
+            </ul>
+            </div>
+            <div class="prev_btn"><img src="img/prev_btn.png" alt=""></div>
+            <div class="next_btn"><img src="img/next_btn.png" alt=""></div>
+    </section>
+    <section id="product">
+        <h2>침실</h2>
+        <ul class="pro_name">
+            <li class="select">전체보기</li>
+            <li>침대</li>
+            <li>옷장</li>
+            <li>수납장</li>
+            <li>화장대</li>
+            <li>액세서리</li>
+            <li >매트리스</li>
+        </ul>
+        <ul class="pro_inven">
+            <li class="select">인기순</li>
+            <li>신상품순</li>
+            <li>가격순</li>
+            <li>상품평순</li>
+        </ul>
+        <ul class="pro_list">
+            <li class="inven">
+                <img src="img/producct0.png" alt="">
+                <div class="text_box">
+                    <h3>쿠시노</h3>
+                    <p>저상형 패밀리 침대(인조가죽)</p>
+                    <p>1,047,000원</p>
+                    <p>40<span>♡</span></p>
+                </div>
+            </li>
+            <li class="inven">
+                <img src="img/product1.png" alt="">
+                <div class="text_box">
+                    <h3>쿠시노</h3>
+                    <p>저상형 패밀리 침대(인조가죽)</p>
+                    <p>1,047,000원</p>
+                    <p>40<span>♡</span></p>
+                </div>
+            </li>
+            <li class="inven">
+                <img src="img/product2.png" alt="">
+                <div class="text_box">
+                    <h3>쿠시노</h3>
+                    <p>저상형 패밀리 침대(인조가죽)</p>
+                    <p>1,047,000원</p>
+                    <p>40<span>♡</span></p>
+                </div>
+            </li>
+            <li class="pro_all inven">
+                <img src="img/product3.png" alt="">
+                <div class="text_box">
+                    <h3>쿠시노</h3>
+                    <p>저상형 패밀리 침대(인조가죽)</p>
+                    <p>1,047,000원</p>
+                    <p>40<span>♡</span></p>
+                </div>
+            </li>
+            <li class="bed">
+                <img src="img/product4.png" alt="">
+                <div class="text_box">
+                    <h3>쿠시노</h3>
+                    <p>저상형 패밀리 침대(인조가죽)</p>
+                    <p>1,047,000원</p>
+                    <p>40<span>♡</span></p>
+                </div>
+            </li>
+            <li class="bed">
+                <img src="img/product5.png" alt="">
+                <div class="text_box">
+                    <h3>쿠시노</h3>
+                    <p>저상형 패밀리 침대(인조가죽)</p>
+                    <p>1,047,000원</p>
+                    <p>40<span>♡</span></p>
+                </div>
+            </li>
+            <li class="bed">
+                <img src="img/product6.png" alt="">
+                <div class="text_box">
+                    <h3>쿠시노</h3>
+                    <p>저상형 패밀리 침대(인조가죽)</p>
+                    <p>1,047,000원</p>
+                    <p>40<span>♡</span></p>
+                </div>
+            </li>
+            <li class="pro_all bed">
+                <img src="img/product7.png" alt="">
+                <div class="text_box">
+                    <h3>쿠시노</h3>
+                    <p>저상형 패밀리 침대(인조가죽)</p>
+                    <p>1,047,000원</p>
+                    <p>40<span>♡</span></p>
+                </div>
+            </li>
+            <li class="pro_all bed">
+                <img src="img/product8.png" alt="">
+                <div class="text_box">
+                    <h3>쿠시노</h3>
+                    <p>저상형 패밀리 침대(인조가죽)</p>
+                    <p>1,047,000원</p>
+                    <p>40<span>♡</span></p>
+                </div>
+            </li>
+            <li class="pro_all bed">
+                <img src="img/product9.png" alt="">
+                <div class="text_box">
+                    <h3>쿠시노</h3>
+                    <p>저상형 패밀리 침대(인조가죽)</p>
+                    <p>1,047,000원</p>
+                    <p>40<span>♡</span></p>
+                </div>
+            </li>
+            <li class="pro_all">
+                <img src="img/product10.png" alt="">
+                <div class="text_box">
+                    <h3>쿠시노</h3>
+                    <p>저상형 패밀리 침대(인조가죽)</p>
+                    <p>1,047,000원</p>
+                    <p>40<span>♡</span></p>
+                </div>
+            </li>
+            <li class="pro_all">
+                <img src="img/product11.png" alt="">
+                <div class="text_box">
+                    <h3>쿠시노</h3>
+                    <p>저상형 패밀리 침대(인조가죽)</p>
+                    <p>1,047,000원</p>
+                    <p>40<span>♡</span></p>
+                </div>
+            </li>
+        </ul>
+        <ul class="pro_page">
+            <li>PREV</li>
+            <li class="select">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>NEXT</li>
+        </ul>
+    </section>
+    <section id="idea">
+        <h2>활용도 높은 집을 위한 스마트한 아이디어</h2>
+        <ul class="idea_list">
+            <li>
+                <img src="img/idea0.png" alt="">
+                <h3>취향대로 완성하는 호텔 침실 인테리어</h3>
+                <a href="#">LEAD MORE +</a>
+            </li>
+            <li>
+                <img src="img/idea1.png" alt="">
+                <h3>사용후기로 만나보는 헤이즐 침대 활용법</h3>
+                <a href="#">LEAD MORE +</a>
+            </li>
+            <li>
+                <img src="img/idea2.jpg" alt="">
+                <h3>내게 꼭 맞는 침실라이프를 위한 <br>모션베드 선택하기</h3>
+                <a href="#">LEAD MORE +</a>
+            </li>
+        </ul>
+    </section>
+    <footer id="footer">
+        <div class="footer_inner">
+            <div class="footer_top">
+                <h1><a href="index.html"><img src="img/f_logo.png" alt="ilroom"></a></h1>
+                <nav class="fnb">
+                    <ul>
+                        <li>ABOUT
+                            <ul>
+                                <li><a href="#">회사소개</a></li>
+                                <li><a href="#">매장안내</a></li>
+                                <li><a href="#">인재채용</a></li>
+                            </ul>
+                        </li>
+                        <li>SUPPORT
+                            <ul>
+                                <li><a href="#">고객지원</a></li>
+                                <li><a href="#">서비스센터</a></li>
+                                <li><a href="#">대리점 개설안내</a></li>
+                            </ul>
+                        </li>
+                        <li>INFO
+                            <ul>
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">개인정보 처리방침</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer_bottom">
+                <ul class="footer_sns_list">
+                    <li><a href="https://www.instagram.com/iloom_official"><img src="img/sns0.png"></a></li>
+                    <li><a href="https://www.facebook.com/myiloom/"><img src="img/sns1.png"></a></li>
+                    <li><a href="https://blog.naver.com/iloom_blog"><img src="img/sns2.png"></a></li>
+                </ul>
+                <div class="footer_bottom_text">
+                    <p>서울시 송파구 오금로 311 (오금동45-1) (주)일룸 ·대표이사 강성문<br>
+                        개인정보보호 책임자 : 강성문<br>
+                        사업자등록번호 : 215-86-93600·통신판매업신고 : 2009-서울송파-0069호·부가통신사업신고필증 : 021129<br>
+                        호스팅 서비스사업자 · (주)일룸<br>
+                        &copy;2021 Shin AeRim, All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section id="fix">
+        <ul class="fix_icon">
+            <li class="open"><img src="img/open_btn.png"></li>
+            <li><a href="https://accounts.kakao.com/login?continue=https%3A%2F%2Fbizmessage.kakao.com%2Fchat%2F-pvC5dMMCIoX3plJpFHPjQ%3Frf%3Dhttps%3A%2F%2Fwww.iloom.com%2F"><img src="img/kakao.png"></a></li>
+            <li class="top_btn"><a href="#"><img src="img/top_btn.png"></a></li>
+        </ul>
+        <div class="slide">
+            <div class="delete"><p>CLOSE</p></div>
+            <div class="slide_warp">
+                <ul class="slide_list">
+                <li><img src="img/my_wh.png" alt="마이페이지" title="마이페이지"></li>
+                    <li><img src="img/basket_wh.png" alt="장바구니" title="장바구니"></li>
+                    <li><img src="img/like_wh.png" alt="찜한상품" title="찜한상품"></li>
+                </ul>
+                <ul class="service">
+                    <li><p>챗봇</p></li>
+                    <li><p>리뷰</p></li>
+                </ul>
+                <div class="view_list">
+                    <p>최근 본 상품</p>
+                    <div></div>
+                </div>
+                <ul class="sns_list">
+                    <li title="instagram" title="instagram"><img src="img/instargram.png" alt="instagram"></li>
+                    <li title="facebook" title="facebook"><img src="img/facebook.png" alt="facebook"></li>
+                    <li title="blog"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
