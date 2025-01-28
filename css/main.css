@@ -16,7 +16,7 @@ body, section, div, h1,h1,h3,h4,h5,h6,p,li,ul,ol,a{font-family: 'Noto Sans KR', 
 #header,#banner,#recommend,#earlybird,#best,#life,#info,#foore{overflow: s;}
 
 @media screen and (min-width:1201px) {    
-#header{position: fixed; height: 100px; z-index: 9999; width: 100%; left:0; top:0;}
+#header{position: fixed; height: 70px; z-index: 9999; width: 100%; left:0; top:0;}
 #header .gnb .top_logo2{display: none; top:24px; position: absolute; margin-left: 100px;}
 #header .gnb .gnb_list{position: absolute; left:50%; top:20px; width: 740px; height: 100px;margin-left: -320px;}
 #header .gnb .gnb_list::after{content: ''; display: block; clear: both;}
@@ -241,28 +241,6 @@ body, section, div, h1,h1,h3,h4,h5,h6,p,li,ul,ol,a{font-family: 'Noto Sans KR', 
 #info .info_inner .info_control .info_control_btn div{float: left; margin-left: 20px; display: block;}
 
 
-#footer{position: relative; background-color: #f0f0f0;margin-top: 50px;padding:50px 0;}
-#footer .footer_inner{width: 1200px; margin: 0 auto;}
-#footer .footer_inner::after{content: ''; display: block; clear: both;}
-
-
-#footer .footer_inner .footer_top{width:100%; position: relative;}
-#footer .footer_inner .footer_top h1{position: relative; left: 50px; top: 50px;  width: 200px;}
-#footer .footer_inner .footer_top .fnb{width:600px; margin:0 auto 20px auto;}
-#footer .footer_inner .footer_top .fnb ul::after{content: ''; display: block; clear: both;}
-#footer .footer_inner .footer_top .fnb ul>li{float: left; margin-left: 2%; text-align: center; margin-bottom: 10px; font-weight: 400; font-size: 16px;}
-#footer .footer_inner .footer_top .fnb ul>li>ul>li>a{text-align: center;}
-#footer .footer_inner .footer_top .footer_service{float: right;}
-
-
-#footer .footer_inner .footer_bottom{width: 1200px; border-top: 1px solid #aaa; padding-top: 20px;}
-#footer .footer_inner .footer_bottom::after{content: ''; display: block; clear: both;}
-#footer .footer_inner .footer_bottom .footer_sns_list{width: 80px; float: left; margin:50px 20px 0 50px;}
-#footer .footer_inner .footer_bottom .footer_sns_list::after{content: ''; display: block; clear: both;}
-#footer .footer_inner .footer_bottom .footer_sns_list>li{float: left; margin-left: 10px;text-align: center;}
-#footer .footer_inner .footer_bottom .footer_sns_list>li:first-child{margin-left: 0;}
-#footer .footer_inner .footer_bottom .footer_bottom_text{text-align: left; float: left; margin-left: 100px;}
-#footer .footer_inner .footer_bottom .footer_bottom_text p{ line-height: 30px;}
 
 
 #fix .fix_icon{position: fixed; right: 50px; bottom:50px;}

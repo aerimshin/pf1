@@ -331,107 +331,93 @@ body #info .info_inner .info_control .info_control_btn div {
   display: block;
 }
 
-#footer {
-  position: relative;
-  background-color: #f0f0f0;
-  margin-top: 50px;
-  padding: 50px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 445px;
-  font-size: 14px;
-}
-#footer #footer_inner {
-  width: 1200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#footer #footer_inner .footer_top {
-  height: 50%;
+#header {
+  position: fixed;
+  height: 70px;
+  z-index: 9999;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  font-size: 14px;
-  padding-bottom: 50px;
-}
-#footer #footer_inner .footer_top .footer_inner_box {
-  display: flex;
-  flex-direction: row;
-  width: 352px;
-  gap: 70px;
-}
-#footer #footer_inner .footer_top .footer_inner_box .footer_inner_item {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-#footer #footer_inner .footer_top .footer_inner_box2 {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-#footer #footer_inner .footer_top .footer_inner_box2 dl {
-  display: flex;
-  flex-direction: row;
-  gap: 35px;
-  align-items: center;
-}
-#footer #footer_inner .footer_top .footer_inner_box2 dl .f13 {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-#footer #footer_inner .footer_top .footer_inner_box2 dl .f13.btnLst {
-  border: 1px solid #aaa;
+  left: 0;
+  top: 0;
   background-color: #FFF;
-  padding: 5px;
-  font-weight: bold;
+  padding: 17.5px 20px;
+  box-sizing: border-box;
 }
-#footer #footer_inner .footer_top .footer_inner_box2 dl .f13.kkBtn {
-  margin-left: 29px !important;
-}
-#footer #footer_inner .footer_top .footer_inner_box2 dl .f13 .mgB8px {
-  font-weight: bold;
-}
-#footer #footer_inner .footer_top .footer_inner_box2 dl .f13 .icnKakaoBlckAftr {
+#header .header_inner {
   display: flex;
   flex-direction: row;
-  gap: 5px;
-  align-items: center;
-}
-#footer #footer_inner .footer_top .footer_inner_box2 dl .f13 .icnKakaoBlckAftr::after {
-  display: block;
-  content: "";
-  background: url(../img/kakao.png) no-repeat center center;
-  width: 16px;
-  height: 16px;
-}
-#footer #footer_inner .footer_top .footer_inner_box2 dl:nth-child(3) {
-  align-items: flex-start;
-  margin-left: 5px;
-}
-#footer #footer_inner .footer_bottom {
-  padding-top: 50px;
   width: 100%;
-  height: 50%;
-  border-top: 1px solid #aaa;
+  align-items: center;
+  justify-content: end;
+  gap: 320px;
+}
+#header .header_inner .top_logo {
+  margin-right: 60px;
+}
+#header .header_inner .gnb {
   display: flex;
   flex-direction: row;
-  gap: 155px;
-  justify-content: flex-start;
-  font-size: 14px;
 }
-#footer #footer_inner .footer_bottom .footer_inner_item {
+#header .header_inner .gnb ul {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  align-items: center;
+  gap: 100px;
 }
-#footer #footer_inner .footer_bottom .footer_inner_info {
+#header .header_inner .gnb ul li {
+  position: relative;
+  font-size: 18px;
+}
+#header .header_inner .gnb ul li .gnb_inner {
+  display: none;
+}
+#header .header_inner .gnb ul li:hover .gnb_inner {
+  position: absolute;
+  left: 0;
+  top: 30px;
   display: flex;
   flex-direction: column;
+  background: #f294f2;
   gap: 10px;
-}/*# sourceMappingURL=footer.css.map */
+  width: 100px;
+  height: 150px;
+  padding: 15px;
+  font-size: 16px;
+}
+#header .header_inner .util {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+#header .header_inner .util ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+#header .header_inner .util ul li {
+  font-size: 16px;
+}
+#header .header_inner .util ul li p {
+  display: none;
+}
+#header .header_inner .util ul li:first-child {
+  margin-left: 0;
+}
+#header .header_inner .util ul li.search {
+  width: 20px;
+  height: 20px;
+  background: url(../img/search.png) no-repeat center center;
+}
+#header .header_inner .util ul li.basket {
+  width: 20px;
+  height: 20px;
+  background: url(../img/basket.png) no-repeat center center;
+}
+#header .header_inner .mob_btn {
+  display: none;
+}
+#header .mob_gnb {
+  display: none;
+}/*# sourceMappingURL=header2.css.map */
