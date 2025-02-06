@@ -1,0 +1,118 @@
+@import "./main2.scss";
+
+#footer{
+    position: relative; background-color: #f0f0f0;margin-top: 50px;padding:50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 445px;
+    font-size: $sub-font-size;
+    #footer_inner{
+        width: 1200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .footer_top{
+            height: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            font-size: $sub-font-size;
+            padding-bottom: 50px;
+            .footer_inner_box{
+                display: flex;
+                flex-direction: row;
+                width: 352px;
+                gap: 70px;
+                .footer_inner_item{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            }
+            .footer_inner_box2{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    dl{
+                        display: flex;
+                        flex-direction: row;
+                        gap:35px;
+                        align-items: center;
+                        .f13{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            &.btnLst{
+                                border:1px solid $grey-color;
+                                background-color: $bg-white;
+                                padding: 5px;
+                                font-weight: bold;
+                            }
+                            &.kkBtn{margin-left: 29px!important;}
+                            .mgB8px{
+                                font-weight: bold;
+                            }
+                            .icnKakaoBlckAftr{
+                                display: flex;
+                                flex-direction: row;
+                                gap:5px;
+                                align-items: center;
+                                &::after{
+                                    display: block;
+                                    content: '';
+                                    background: url(../img/kakao.png) no-repeat center center;
+                                    width:16px;
+                                    height: 16px;
+                                }
+                            }
+                            
+                        }
+                      
+                        &:nth-child(3){
+                            align-items: flex-start;
+                            margin-left: 5px;
+                        }
+                    }
+            }
+        }
+        .footer_bottom{
+            padding-top: 50px;
+            width:100%;
+            height: 50%;
+            border-top:1px solid #aaa;
+            display: flex;
+            flex-direction: row;
+            gap: 155px;
+            justify-content: flex-start;
+            font-size: $sub-font-size;
+            .footer_inner_item{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+            }
+            .footer_inner_info{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    }
+}
+
+//노트북
+@include laptop {}
+    
+// 태블릿에서 노트북
+@include laptopToTablet {}
+
+// 태블릿
+@include tablet {}
+
+// 모바일에서 태블릿
+@include tabletToMobile  {}
+
+// 모바일
+@include mobile  {}

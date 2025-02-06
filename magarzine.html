@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매거진</title>
+    <link href="css/sub_magazine.css" type="text/css" rel="stylesheet">
+    <link href="css/main2.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    //    AOS.init({
+    //     duration: 1200,
+    //     })
+    // include.js
+window.addEventListener('load', function() {
+    var allElements = document.getElementsByTagName('*');
+    Array.prototype.forEach.call(allElements, function(el) {
+        var includePath = el.dataset.includePath;
+        if (includePath) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    el.outerHTML = this.responseText;
+                }
+            };
+            xhttp.open('GET', includePath, true);
+            xhttp.send();
+        }
+    });
+});
+    </script>
+</head>
+<body>
+    <!-- <header data-include-path="header2.html"></header> -->
+    <section>
+        <h1>Magarzine</h1>
+        <span class="sub_title">번뜩이는 영감과 재미있는 이야기로 가득찬 일룸매거진을 만나보세요.</span>
+        <ul class="magarzineTab">
+            <li class="select">전체</li>
+            <li>제품</li>
+            <li>아이디어</li>
+            <li>솔루션</li>
+            <li>스토리</li>
+            <li>브랜드</li>
+        </ul>
+        <ul class="MagarzineList">
+            <li data-aos="fade-up" data-aos-duration="3000">
+                <div class="MagarzineImg"></div> 
+                <div class="MagarzineTxt">
+                    <p class="newTag">NEW</p>
+                    <h3>꿀잠을 위한 데일리루틴<식습관>편</h3>
+                    <span>#침실 #숙면 #침대 #매트리스</span>
+                </div>
+            </li>
+            <li data-aos="fade-up" data-aos-duration="3000">
+                <div class="MagarzineImg"></div> 
+                <div class="MagarzineTxt">
+                    <p class="newTag">NEW</p>
+                    <h3>패밀리침대, 알고쓰면 더 똑똑해진다!</h3>
+                    <span>#국민패밀리베드 #쿠시노 #쿠시노전용매트리스</span>
+                </div>
+            </li>
+            <li data-aos="fade-up" data-aos-duration="3000">
+                <div class="MagarzineImg"></div> 
+                <div class="MagarzineTxt">
+                    <p class="newTag">NEW</p>
+                    <h3>나에게 꼭 맞는 뉴트 패키지 골라보기</h3>
+                    <span>#뉴트 #추천패키지 #올인원 #집중형 #오픈형</span>
+                </div>
+            </li>
+            <li data-aos="fade-up" data-aos-duration="3000">
+                <div class="MagarzineImg"></div> 
+                <div class="MagarzineTxt">
+                    <p class="bestTag">BEST</p>
+                    <h3>꿀잠을 위한 데일리루틴<식습관>편</h3>
+                    <span>#침실 #숙면 #침대 #매트리스</span>
+                </div>
+            </li>
+            <li data-aos="fade-up" data-aos-duration="3000">
+                <div class="MagarzineImg"></div> 
+                <div class="MagarzineTxt">
+                    <h3>HOW TO USE VANCOUVER<br/>나다운 편안함 찾기</h3>
+                    <span>#거실 #소파고르기 #밴쿠버</span>
+                </div>
+            </li>
+            <li data-aos="fade-up" data-aos-duration="3000">
+                <div class="MagarzineImg"></div> 
+                <div class="MagarzineTxt">
+                    <h3>변치않는 학생방의 정석</h3>
+                    <span>#뉴트 #로이 #링키플러스</span>
+                </div>
+            </li>
+            <li data-aos="fade-up" data-aos-duration="3000">
+                <div class="MagarzineImg"></div> 
+                <div class="MagarzineTxt">
+                    <h3>꿀잠을 위한 데일리루틴<수면환경>편</h3>
+                    <span>#침실 #숙면 #침대 #매트리스</span>
+                </div>
+            </li>
+            <li data-aos="fade-up" data-aos-duration="3000">
+                <div class="MagarzineImg"></div> 
+                <div class="MagarzineTxt">
+                    <h3>No.1학생방 전문가<br/>일룸이 만든 학생방</h3>
+                    <span>#뉴트 #학생방 #디자인씽킹</span>
+                </div>
+            </li>
+            <li data-aos="fade-up" data-aos-duration="3000">
+                <div class="MagarzineImg"></div> 
+                <div class="MagarzineTxt">
+                    <h3>홈파티의 기술</h3>
+                    <span>#다이닝룸 #홈파티 #컨벤셔널 #센서티브 #식탁</span>
+                </div>
+            </li>
+            <li data-aos="fade-up" data-aos-duration="3000">
+                <div class="MagarzineImg"></div> 
+                <div class="MagarzineTxt">
+                    <h3>나의 퍼스널 인테리어 테스트</h3>
+                    <span>#넬리로디 #스페이스덴티티 #퍼스널인테리어 #인테리어팁</span>
+                </div>
+            </li>
+            <li data-aos="fade-up" data-aos-duration="3000">
+                <div class="MagarzineImg"></div> 
+                <div class="MagarzineTxt">
+                    <h3>패브릭 소파 실패없이 고르는법</h3>
+                    <span>#거실 #패브릭소파 #소파고르는법</span>
+                </div>
+            </li>
+            <li data-aos="fade-up" data-aos-duration="3000">
+                <div class="MagarzineImg"></div> 
+                <div class="MagarzineTxt">
+                    <h3>나를 닮은 나의 집</h3>
+                    <span>#침실 #거실 #가구추천 #인테리어트렌드</span>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <footer data-include-path="footer.html"></footer>
+</body>
+</html>

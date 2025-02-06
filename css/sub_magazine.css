@@ -1,0 +1,330 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+* {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border: none;
+  display: block;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+body section {
+  width: 1200px;
+  margin: 134px auto 0 auto;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body section h1 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+body section span.sub_title {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body section span.sub_title::before {
+  content: "";
+  display: block;
+  background: url(../img/magazine/comma1.png) no-repeat center center;
+  overflow: hidden;
+}
+body section span.sub_title::after {
+  content: "";
+  display: block;
+  background: url(../img/magazine/comma2.png) no-repeat center center;
+  overflow: hidden;
+}
+body section .magarzineTab {
+  width: 100%;
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+body section .magarzineTab li {
+  width: 16.6%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+  border-left: 0;
+}
+body section .magarzineTab li.select {
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+body section .MagarzineList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2%;
+}
+body section .MagarzineList li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: 0.3s;
+  cursor: pointer;
+}
+body section .MagarzineList li:hover {
+  position: relative;
+  top: -10px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+body section .MagarzineList li:first-child .MagarzineImg {
+  background: url(../img/magazine/m1.jpeg) no-repeat center center;
+  background-size: cover;
+}
+body section .MagarzineList li:nth-child(2) .MagarzineImg {
+  background: url(../img/magazine/m2.jpeg) no-repeat center center;
+  background-size: cover;
+}
+body section .MagarzineList li:nth-child(3) .MagarzineImg {
+  background: url(../img/magazine/m3.jpg) no-repeat center center;
+  background-size: cover;
+}
+body section .MagarzineList li:nth-child(4) .MagarzineImg {
+  background: url(../img/magazine/m4.jpg) no-repeat center center;
+  background-size: cover;
+}
+body section .MagarzineList li:nth-child(5) .MagarzineImg {
+  background: url(../img/magazine/m5.jpeg) no-repeat center center;
+  background-size: cover;
+}
+body section .MagarzineList li:nth-child(6) .MagarzineImg {
+  background: url(../img/magazine/m6.jpeg) no-repeat center center;
+  background-size: cover;
+}
+body section .MagarzineList li:nth-child(7) .MagarzineImg {
+  background: url(../img/magazine/m7.jpeg) no-repeat center center;
+  background-size: cover;
+}
+body section .MagarzineList li:nth-child(8) .MagarzineImg {
+  background: url(../img/magazine/m8.jpeg) no-repeat center center;
+  background-size: cover;
+}
+body section .MagarzineList li:nth-child(9) .MagarzineImg {
+  background: url(../img/magazine/m9.jpeg) no-repeat center center;
+  background-size: cover;
+}
+body section .MagarzineList li:nth-child(10) .MagarzineImg {
+  background: url(../img/magazine/m10.jpeg) no-repeat center center;
+  background-size: cover;
+}
+body section .MagarzineList li:nth-child(11) .MagarzineImg {
+  background: url(../img/magazine/m11.jpeg) no-repeat center center;
+  background-size: cover;
+}
+body section .MagarzineList li:nth-child(12) .MagarzineImg {
+  background: url(../img/magazine/m12.jpeg) no-repeat center center;
+  background-size: cover;
+}
+body section .MagarzineList li .MagarzineImg {
+  width: 100%;
+  height: 215px;
+}
+body section .MagarzineList li .MagarzineTxt {
+  width: 100%;
+  height: 155px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+body section .MagarzineList li .MagarzineTxt h3 {
+  font-size: 18px;
+  margin-bottom: 37px;
+}
+body section .MagarzineList li .MagarzineTxt span {
+  font-size: 14px;
+  color: #aaa;
+  margin: 0;
+}
+body section .MagarzineList li .MagarzineTxt .newTag {
+  width: 36px;
+  height: 21px;
+  border-radius: 5px;
+  color: #fff;
+  background: #FEE289;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body section .MagarzineList li .MagarzineTxt .bestTag {
+  width: 36px;
+  height: 21px;
+  border-radius: 5px;
+  color: #fff;
+  background: #FF7A6C;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) and (max-width: 1499px) {
+  section {
+    width: 100%;
+    overflow: hidden;
+  }
+  section .magarzineTab {
+    width: 92%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  section .MagarzineList {
+    width: 92%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 960px) and (max-width: 1023px) {
+  section {
+    width: 100%;
+    overflow: hidden;
+  }
+  section .magarzineTab {
+    width: 92%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  section .MagarzineList {
+    width: 92%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+  }
+}
+@media (min-width: 720px) and (max-width: 959px) {
+  section {
+    width: 100%;
+    overflow: hidden;
+  }
+  section .magarzineTab {
+    width: 92%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  section .MagarzineList {
+    width: 92%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+  }
+}
+@media (min-width: 535px) and (max-width: 719px) {
+  section {
+    width: 100%;
+    overflow: hidden;
+  }
+  section h1 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+  section span.sub_title {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  section .magarzineTab {
+    width: 92%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  section .magarzineTab li {
+    font-size: 12px;
+  }
+  section .MagarzineList {
+    width: 92%;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    gap: 0.8%;
+  }
+  section .MagarzineList li .MagarzineTxt {
+    gap: 8px;
+  }
+  section .MagarzineList li .MagarzineTxt .newTag {
+    font-size: 8px;
+  }
+  section .MagarzineList li .MagarzineTxt h3 {
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+  section .MagarzineList li .MagarzineTxt span {
+    font-size: 12px;
+  }
+}
+@media (min-width: 335px) and (max-width: 534px) {
+  section {
+    width: 100%;
+    overflow: hidden;
+  }
+  section h1 {
+    font-size: 20px;
+  }
+  section span.sub_title {
+    font-size: 16px;
+  }
+  section .magarzineTab {
+    width: 92%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  section .magarzineTab li {
+    font-size: 12px;
+  }
+  section li .MagarzineList {
+    width: 92%;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    gap: 0.8%;
+  }
+  section li .MagarzineList .MagarzineTxt {
+    gap: 8px;
+  }
+  section li .MagarzineList .MagarzineTxt .newTag {
+    font-size: 8px;
+  }
+  section li .MagarzineList .MagarzineTxt h3 {
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+  section li .MagarzineList .MagarzineTxt span {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=sub_magazine.css.map */

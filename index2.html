@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iloom</title>
+    <link href="css/main2.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<script>$(function(){
+    var scrollTop = $(window).scrollTop()
+    // $(window).scroll(function(){//스트롤 header
+    //     scrollTop = $(window).scrollTop()
+    //     if(scrollTop>0){
+    //         $('#header').css('background-color','#fff').css('height','70px').css('box-shadow' ,'1px 1px 4px rgba(70, 69, 69, 0.3)').find('.gnb>.top_logo2').css('display','block')
+    //         $('.top_logo1').css('display','none')
+    //     }else{
+    //         $('#header').css('background','none').css('height','70px').css('box-shadow' ,'none').find('.gnb>.top_logo2').css('display','none')
+    //         $('.top_logo1').css('display','block')
+    //     }
+        
+    // })
+    $('.gnb>ul>li').on({//gnb ,+none
+        mouseenter:function(){$(this).find('.gnb_inner').stop().slideDown(300)},
+        mouseleave:function(){$(this).find('.gnb_inner').stop().slideUp(300)},
+        focusin:function(){$(this).find('.gnb_inner').stop().slideDown(300)},
+        focusout:function(){$(this).find('.gnb_inner').stop().slideUp(300)}
+    })
+    //banner btn
+    $('.banner_btn>.left_btn').each(function(index){
+        $(this).mouseenter(function(){
+            var alt =$(this).find('img').attr('alt')
+            $(this).find('img').attr('src','img/left_btn_on.png')
+            $(this).find('img').attr('class','select')
+        })
+        $(this).mouseleave(function(){
+            $(this).find('img').attr('src','img/left_btn_wh.png')
+            $(this).find('img').stop().removeAttr('class')
+        })
+    })
+    $('.banner_btn>.right_btn').each(function(index){
+        $(this).mouseenter(function(){
+            var alt =$(this).find('img').attr('alt')
+            $(this).find('img').attr('src','img/right_btn_on.png')
+            $(this).find('img').attr('class','select')
+        })
+        $(this).mouseleave(function(){
+            $(this).find('img').attr('src','img/right_btn_wh.png')
+            $(this).find('img').stop().removeAttr('class')
+        })
+    })
+    //banner slide
+    var clickNum = 0
+    $('.banner_list').each(function(index){
+        $(this).click(function(){
+            slider(index)
+            // click
+        })
+    })
+    //banner text
+    $(function(){
+    $('.banner_right_inner h2').animate({marginLeft:100,opacity:1},1000)
+    $('.banner_right_inner p').delay(200).animate({marginLeft:0,opacity:1},1000)
+    $('.banner_right_inner a').delay(300).animate({marginLeft:500,opacity:1},1000)
+    })
+    //banner 이동
+    $('.right_btn').click(function(){
+        $('.banner_right_inner>li:first').animate({marginLeft:'-14.28%'},500,function(){
+            $(this).appendTo('.banner_right_inner').css('margin-left','0')
+        })
+    })
+
+    // $('.banner_right_inner>li').first().appendTo('.banner_right_inner')
+
+    $('.left_btn').click(function(){
+      $('.banner_right_inner>li:last').prependTo('.banner_right_inner').css('margin-left','-14.28%').animate({marginLeft:0},500)
+    })
+    //banner autosilde
+    function autoBanner(index){
+        $('.banner_right_inner>li:first').animate({marginLeft:'-14.28%'},500,function(){
+            $(this).appendTo('.banner_right_inner').css('margin-left','0')
+        })
+     }
+     auto = setInterval(autoBanner, 5000)
+
+    //banner list click move
+    $('.banner_list>li').each(function(index){
+        $(this).click(function(){
+        $(this).addClass('select').siblings().removeClass('select')
+        
+        })
+    })
+
+    //life bottom
+    var winScroll = $(window).scrollTop()
+    var lifeTop = $('#life').offset().top
+    $(window).resize(function(){
+        var lifeTop = $('#life').offset().top
+    })
+    //life text
+    $(window).scroll(function(){
+        var scrollTopIndex = $(this).scrollTop()
+        winScroll = $(window).scrollTop()
+        if(winScroll>lifeTop-200){
+            $('.life_bottom>ul>li').each(function(index){
+                $(this).delay(index*200).animate({top:0,opacity:1},500)
+            })
+        }
+        if(scrollTopIndex > $('#life').offset().top-1000){
+        $('.myliroomlife').animate({backgroundPositionX:(-scrollTopIndex*1)}, 0)
+        }
+    })
+    
+    $('.life_bottom>ul>li').each(function(index){
+        $(this).mouseover(function(){
+            $('.life_list>li .life_list_text').eq(index).stop().animate({height:188},500).css('box-shadow','1px 1px 7px rgba(70, 69, 69, 0.3)')
+        })
+        $(this).mouseout(function(){
+            $('.life_list>li .life_list_text').eq(index).stop().animate({height:140},500).css('box-shadow','none')
+        })
+    })
+
+    //sns img크기 
+    $('#sns .sns_inner_list>li').on({ 
+        mouseenter:function(){
+        $(this).find('img').css('transform','scale(1.1)')
+        },
+        mouseleave:function(){
+        $(this).find('img').css('transform','scale(1)')
+        }
+    })
+
+    //best img 변경
+    $('.best_inner_list>li').each(function(index){
+        $(this).mouseenter(function(){
+            var alt =$(this).find('img').attr('alt')
+            $(this).find('img').attr('src','img/best'+index+'_on.png')
+            $(this).find('img').attr('class','select')
+        })
+        $(this).mouseleave(function(){
+            $(this).find('img').attr('src','img/best'+index+'.jpg')
+            $(this).find('img').stop().removeAttr('class')
+        })
+    })
+    //info button
+    
+    var infoNum = 0
+
+    $('.controls>li').each(function(index){
+        $(this).click(function(){
+            slider(index)
+            infoNum = index
+        })
+    })
+    $('.next_btn').click(function(){
+        infoNum++
+        if(infoNum>2){
+            infoNum = 0
+        }
+        $('.controls>li').eq(infoNum).addClass('select').siblings().removeClass('select')
+        $('.info_list>li:first').animate({marginLeft:'-34%'},500,function(){
+          $(this).appendTo('.info_list').css('margin-left',0)
+      })
+    })
+    $('.prev_btn').click(function(){
+        infoNum--
+        if(infoNum<0){
+            infoNum = 2
+        }
+        $('.controls>li').eq(infoNum).addClass('select').siblings().removeClass('select')
+      $('.info_list>li:last').prependTo('.info_list').css('margin-left','-34%').animate({marginLeft:0},500)
+    })
+
+    $(window).resize(function(){
+    winWidth = $(this).width()
+    $('.info_list').css('margin-left',-winWidth*clickNum)
+    })
+
+    
+    //btn
+    $('.next_btn').each(function(index){
+        $(this).mouseenter(function(){
+            var alt =$(this).find('img').attr('alt')
+            $(this).find('img').attr('src','img/next_on.jpg')
+        })
+        $(this).mouseleave(function(){
+            $(this).find('img').attr('src','img/next_btn.png')
+        })
+    })
+    $('.prev_btn').each(function(index){
+        $(this).mouseenter(function(){
+            var alt =$(this).find('img').attr('alt')
+            $(this).find('img').attr('src','img/prev_on.jpg')
+        })
+        $(this).mouseleave(function(){
+            $(this).find('img').attr('src','img/prev_btn.png')
+        })
+    })
+    
+
+    //open fixmenu
+    $('.fix_icon .open').click(function(){
+        $('#fix .slide').animate({right:0})
+    })
+    $('.slide .delete').click(function(){
+        $('#fix .slide').animate({right:'-20%'})
+    })
+
+    //화살표 animation
+    function autoAnimation(){
+        $('#middle_banner>a img').animate({marginLeft:-5},700).animate({marginLeft:0},600)
+        $('.scroll_text>img').animate({marginBottom:-7},500).animate({marginBottom:0},500)
+    }
+    setInterval(autoAnimation,500)
+
+    //fix,top
+    $('.top_btn').click(function(){
+        $('#header').animate({scrollTop:0},'100')
+    })
+})
+</script>
+<script>
+        window.addEventListener('load', function() {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function(el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        });
+
+        //best img 변경
+        $('.best_inner_list>li').each(function(index){
+                $(this).mouseenter(function(){
+                    var alt =$(this).find('img').attr('alt')
+                    $(this).find('img').attr('src','img/best'+index+'_on.png')
+                    $(this).find('img').attr('class','select')
+                })
+                $(this).mouseleave(function(){
+                    $(this).find('img').attr('src','img/best'+index+'.jpg')
+                    $(this).find('img').stop().removeAttr('class')
+                })
+            })
+    </script>
+<body>
+    <header data-include-path="header2.html"></header>
+    <section id="banner">
+        <div class="bannerLeft">
+            <h1 class="bigLogo"><a href="index.html"></a></h1>
+            <ul class="bannerList">
+                <li class="select">01. Dream Promosion</li>
+                <li>02. Daily lioom Pastar</li>
+                <li>03. 학교 팝업 Open</li>
+                <li>04. 일룸 X 경동나비엔</li>
+                <li>05. BEST ITEM</li>
+            </ul>
+            <small>SCROLL</small>
+        </div>
+        <div class="bannerRight">
+            <ul class="bannerImg">
+                <li class="b0"><a href="#">LEAREN MORE +</a></li>
+                <li class="b1"><a href="#">LEAREN MORE +</a></li>
+                <li class="b2"><a href="#">LEAREN MORE +</a></li>
+                <li class="b3"><a href="#">LEAREN MORE +</a></li>
+                <li class="b4"><a href="#">LEAREN MORE +</a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="recommend">
+        <div>
+            <h2>고객님을 위한 추천상품</h2>
+            <ul class="recommendTab">
+                <li class="select">BED</li>
+                <li>SOFA</li>
+                <li>CHIAR</li>
+                <li>FABRIC</li>
+                <li>HOMEDECO</li>
+            </ul>
+            <ul class="recommendList">
+                <li>
+                    <a href="#">
+                        <img src="img/chair0.jpg">
+                        <h3>[일룸]비토 의자</h3>
+                        <p>259,000원</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/chair1.jpg">
+                        <h3>[일룸]올리버<br>매쉬의자(회전형,BK)</h3>
+                        <p>244,000원</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/chair2.jpg">
+                        <h3>[일룸]올리버<br>플라스틱의자(고정형,WH)</h3>
+                        <p>249,000원</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/chair3.jpg">
+                        <h3>[일룸]아코 플리아코</h3>
+                        <p>99,000원</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/chair4.jpg">
+                        <h3>[일룸]세타 플러스벤치<br>(인조가죽)</h3>
+                        <p>270,000원</p>
+                    </a>
+                </li>
+            </ul>
+            <a href="#" class="prev_btn"><img src="img/prev_btn.png"></a>
+            <a href="#" class="next_btn"><img src="img/next_btn.png"></a>
+        </div>
+    </section>
+    <section id="earlyBird">
+        <div>
+            <h2>소파사기 좋은 지금, <p class="point_color">iloom</p>으로</h2>
+            <h3>얼리버드특가<small class="point_color">~한정수량까지</small></h3>
+            <span>일룸이 준비한 '소파사기좋은혜택'을 만나보세요.</span>
+            <ul class="earlyBirdList">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="pager">
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="mob_earlyBird">
+            <h2>소파사기 좋은 지금, <p class="point_color">iloom</p>으로</h2>
+            <h3>얼리버드특가<small class="point_color">~한정수량까지</small></h3>
+            <span>일룸이 준비한 '소파사기좋은혜택'을 만나보세요.</span>
+            <ul class="earlyBirdList">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="pager">
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+    <section id="best">
+        <div class="best_inner">
+            <h2>BEST ITEM</h2>
+            <p>일룸이 보장하는 베스트 아이템을 만나보세요.</p>
+            <ul class="best_inner_list">
+                <li>
+                    <img src="img/best0.jpg" alt="" class="img0">
+                    <h3>[일룸]올리버<br>플라스틱의자(고정형,WH)</h3>
+                    <p>249,000원</p>
+                </li>
+                <li>
+                    <img src="img/best1.jpg" alt="" class="img1">
+                    <h3>[일룸]올리버<br>플라스틱의자(고정형,WH)</h3>
+                    <p>249,000원</p>
+                </li>
+                <li>
+                    <img src="img/best2.jpg" alt="" class="img2">
+                    <h3>[일룸]올리버<br>플라스틱의자(고정형,WH)</h3>
+                    <p>249,000원</p>
+                </li>
+                <li>
+                    <img src="img/best3.jpg" alt="" class="img3">
+                    <h3>[일룸]올리버<br>플라스틱의자(고정형,WH)</h3>
+                    <p>249,000원</p>
+                </li>
+                <li>
+                    <img src="img/best4.jpg" alt="" class="img4">
+                    <h3>[일룸]볼케<br>1인 리클라이너 소파 (H가죽,전동)</h3>
+                    <p>1,989,000원</p>
+                </li>
+                <li>
+                    <img src="img/best5.jpg" alt="" class="img5">
+                    <h3>[일룸]미엘/아르지안<br>원형협탁(소)(온라인몰 전용)</h3>
+                    <p>103,000원</p>
+                </li>
+                <li>
+                    <img src="img/best6.jpg" alt="" class="img6">
+                    <h3>[일룸]버튼</h3>
+                    <p>145,000원</p>
+                </li>
+                <li>
+                    <img src="img/best7.jpg" alt="" class="img7">
+                    <h3>[일룸]로이<br>(1400폭 5단 다리형 책상 SET)</h3>
+                    <p>699,000원</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="middle_banner" alt="디지털 vr쇼룸">
+        <!-- <img src="img/middle_banner.jpg"alt="디지털 vr쇼룸"> -->
+        <div>
+            <a href="#" class="banner_more_btn">지금방문하기
+            </a>
+        </div>
+    </section>
+    <section id="lifeStory">
+        <div>
+            <div class="text_top">
+                <h2></h2>
+                <span>일룸으로 달라진 특별한 생활을 만나보세요.</span>
+            </div>
+            <div class="life_top_video"><iframe width="560" height="315" src="https://www.youtube.com/embed/X4x-fcR_k7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <ul class="lifeList">
+                <li>
+                    <div class="snsImg"></div>
+                    <h4>태희님의 일룸생활</h4>
+                    <span>오래쓰고싶어서 화이트톤을 찾고 있었는데 디테일까지 튼튼하게 잘 만들어져 있더라고요. 그전에는..</span>
+                    <div class="tagAra">
+                        <p class="tag">아늑함</p>
+                        <p class="tag">프렌치 무드</p>
+                    </div>
+                    <div class="snsProduct">
+                        <div class="productImg"></div>
+                        <span>6단 다리형책상..</span>
+                        <p>1,544,000원</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="snsImg"></div>
+                    <h4>태희님의 일룸생활</h4>
+                    <span>오래쓰고싶어서 화이트톤을 찾고 있었는데 디테일까지 튼튼하게 잘 만들어져 있더라고요. 그전에는..</span>
+                    <div class="tagAra">
+                        <p class="tag">아늑함</p>
+                        <p class="tag">프렌치 무드</p>
+                    </div>
+                    <div class="snsProduct">
+                        <div class="productImg"></div>
+                        <span>6단 다리형책상..</span>
+                        <p>1,544,000원</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="snsImg"></div>
+                    <h4>태희님의 일룸생활</h4>
+                    <span>오래쓰고싶어서 화이트톤을 찾고 있었는데 디테일까지 튼튼하게 잘 만들어져 있더라고요. 그전에는..</span>
+                    <div class="tagAra">
+                        <p class="tag">아늑함</p>
+                        <p class="tag">프렌치 무드</p>
+                    </div>
+                    <div class="snsProduct">
+                        <div class="productImg"></div>
+                        <span>6단 다리형책상..</span>
+                        <p>1,544,000원</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="snsImg"></div>
+                    <h4>태희님의 일룸생활</h4>
+                    <span>오래쓰고싶어서 화이트톤을 찾고 있었는데 디테일까지 튼튼하게 잘 만들어져 있더라고요. 그전에는..</span>
+                    <div class="tagAra">
+                        <p class="tag">아늑함</p>
+                        <p class="tag">프렌치 무드</p>
+                    </div>
+                    <div class="snsProduct">
+                        <div class="productImg"></div>
+                        <span>6단 다리형책상..</span>
+                        <p>1,544,000원</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="sns">
+        <div>
+            <h2>INSTARGRAM</h2>
+            <span><a herf="https://www.instagram.com/iloom_official">@ilroom_offical</a></span>
+            <ul class="snsList">
+                <li><a href="#"><img src="img/sns0.jpg" alt=""></a></li>
+                <li><a href="#"><img src="img/sns1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="img/sns2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="img/sns3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="img/sns4.jpg" alt=""></a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="info">
+        <div class="info_inner">
+            <div class="info_text">
+                <h2>일룸소개</h2>
+                <h3>일룸<span>,</span><br>가구를 만듭니다<span>.</span></h3>
+                <p>일룸은 진정성 있는 가구를 만들기 위해<br>끊임없이 노력하고 노력합니다.</p>
+                <p>가구를 <span>'제대로'</span>만드는 일룸입니다.</p>
+            </div>
+            <div class="info_wrap">
+                <ul class="info_list">
+                    <li><a href="#"><img src="img/info0.jpg" alt="공지사항"></a></li>
+                    <li><a href="#"><img src="img/info1.jpg" alt="브랜드 스토리"></a></li>
+                    <li><a href="#"><img src="img/info2.jpg" alt="매장안내"></a></li>
+                </ul>
+            </div>
+            <div class="info_control">
+                <ul class="controls">
+                    <li class="select"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <!-- <div class="info_control_btn">
+                    <div class="prev_btn"><img src="img/prev_btn.png" alt="이전버튼"></div>
+                    <div class="next_btn"><img src="img/next_btn.png" alt="다음버튼"></div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>

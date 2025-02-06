@@ -1,0 +1,382 @@
+body{
+    display: flex;
+    flex-direction: column;
+    section{
+        width:1200px;
+        margin: 134px auto 0 auto;
+        color:#333;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1{
+            font-size:30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        span.sub_title{
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            &::before{
+                content: '';
+                display: block;
+                background: url(../img/magazine/comma1.png)no-repeat center center;
+                overflow:hidden ;
+            }
+            &::after{
+                content: '';
+                display: block;
+                background: url(../img/magazine/comma2.png)no-repeat center center;
+                overflow:hidden ;
+            }
+        }
+        .magarzineTab{
+            width: 100%;
+            height: 42px;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 50px;
+            li{
+                width: 16.6%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                color:#aaa;
+                cursor: pointer;
+                &.select{
+                    background-color: #333;
+                    color: #fff;
+                    border: none;
+                }
+                border:1px solid $bg-color;
+                border-left: 0;
+            }
+        }
+        .MagarzineList{
+            width:100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:2%;
+            
+            li{
+                width:100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border-radius: 15px;
+                border:1px solid #f0f0f0;
+                overflow: hidden;
+                box-sizing: border-box;
+                transition: .3s;
+                cursor: pointer;
+                &:hover{
+                    position: relative;
+                    top:-10px;
+                    box-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.2);
+                    transition: .3s;
+                }
+                &:first-child{
+                    .MagarzineImg{
+                        background: url(../img/magazine/m1.jpeg) no-repeat center center;
+                        background-size:cover;
+                        
+                    }
+                }
+                &:nth-child(2){
+                    .MagarzineImg{
+                        background: url(../img/magazine/m2.jpeg) no-repeat center center;
+                        background-size:cover;
+                    }
+                }
+                &:nth-child(3){
+                    .MagarzineImg{
+                        background: url(../img/magazine/m3.jpg) no-repeat center center;
+                        background-size:cover;
+                    }
+                }
+                &:nth-child(4){
+                    .MagarzineImg{
+                        background: url(../img/magazine/m4.jpg) no-repeat center center;
+                        background-size:cover;
+                    }
+                }
+                &:nth-child(5){
+                    .MagarzineImg{
+                        background: url(../img/magazine/m5.jpeg) no-repeat center center;
+                        background-size:cover;
+                    }
+                }
+                &:nth-child(6){
+                    .MagarzineImg{
+                        background: url(../img/magazine/m6.jpeg) no-repeat center center;
+                        background-size:cover;
+                    }
+                }
+                &:nth-child(7){
+                    .MagarzineImg{
+                        background: url(../img/magazine/m7.jpeg) no-repeat center center;
+                        background-size:cover;
+                    }
+                }
+                &:nth-child(8){
+                    .MagarzineImg{
+                        background: url(../img/magazine/m8.jpeg) no-repeat center center;
+                        background-size:cover;
+                    }
+                }
+                &:nth-child(9){
+                    .MagarzineImg{
+                        background: url(../img/magazine/m9.jpeg) no-repeat center center;
+                        background-size:cover;
+                    }
+                }
+                &:nth-child(10){
+                    .MagarzineImg{
+                        background: url(../img/magazine/m10.jpeg) no-repeat center center;
+                        background-size:cover;
+                    }
+                }
+                &:nth-child(11){
+                    .MagarzineImg{
+                        background: url(../img/magazine/m11.jpeg) no-repeat center center;
+                        background-size:cover;
+                    }
+                }
+                &:nth-child(12){
+                    .MagarzineImg{
+                        background: url(../img/magazine/m12.jpeg) no-repeat center center;
+                        background-size:cover;
+                    }
+                }
+                .MagarzineImg{
+                    width:100%;
+                    height: 215px;
+                    
+                }
+                .MagarzineTxt{
+                    width: 100%;
+                    height: 155px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    gap: 15px;
+                    padding: 20px;
+                    box-sizing: border-box;
+                    h3{
+                        font-size: $main-font-size;
+                        margin-bottom: 37px;
+                    }
+                    span{
+                        font-size: $sub-font-size;
+                        color:$grey-color;
+                        margin: 0;;
+                    }
+                    .newTag{
+                        width: 36px;
+                        height: 21px;
+                        border-radius: 5px;
+                        color: #fff;
+                        background: #FEE289;
+                        font-size: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .bestTag{
+                        width: 36px;
+                        height: 21px;
+                        border-radius: 5px;
+                        color: #fff;
+                        background: #FF7A6C;
+                        font-size: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//반응형
+// 데스크탑
+// @include desktop {
+	
+// }
+
+
+// 노트북에서 데스크탑
+@include desktopToLaptop {
+    // section{
+        
+
+    //     .magarzineTab{
+    //         width: 92%;
+    //         margin: 0 auto;
+    //     }
+    //     .MagarzineList{
+    //         width: 92%;
+    //         margin: 0 auto;
+    //     }
+    // }
+}
+
+
+// 노트북
+@include laptop {
+    section{
+        width: 100%;
+        overflow: hidden;
+        .magarzineTab{
+            width: 92%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            
+        }
+        .MagarzineList{
+            width: 92%;
+            margin: 0 auto;
+            
+        }
+    }
+}
+
+
+// 태블릿에서 노트북
+@include laptopToTablet {
+    section{
+        width: 100%;
+        overflow: hidden;
+        .magarzineTab{
+            width: 92%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+        .MagarzineList{
+            width: 92%;
+            margin: 0 auto;
+            grid-template-columns: 1fr 1fr;
+            gap:2%;
+            
+        }
+    }
+}
+
+
+// 태블릿
+@include tablet {
+    section{
+        width: 100%;
+        overflow: hidden;
+        .magarzineTab{
+            width: 92%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+        .MagarzineList{
+            width: 92%;
+            margin: 0 auto;
+            grid-template-columns: 1fr 1fr;
+            gap:2%;
+        }
+    }
+}
+
+
+// 모바일에서 태블릿
+@include tabletToMobile  {
+    section{
+        width: 100%;
+        overflow: hidden;
+        h1{
+            font-size:20px;
+            margin-bottom: 18px;
+        }
+        span.sub_title{
+            font-size: 16px;
+            margin-bottom: 50px;
+        }
+        .magarzineTab{
+            width: 92%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            li{
+                font-size: 12px;
+            }
+        }
+        .MagarzineList{
+            width: 92%;
+            margin: 0 auto;
+            grid-template-columns: 1fr;
+            gap:.8%;
+            li{
+                .MagarzineTxt{
+                    gap: 8px;
+                    .newTag{
+                        font-size: 8px;
+                    }
+                    h3{
+                        font-size: 14px;
+                        margin-bottom: 22px;
+                    }
+                    span{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 모바일
+@include mobile  {
+    section{
+        width: 100%;
+        overflow: hidden;
+        h1{
+            font-size:20px;
+        }
+        span.sub_title{
+            font-size: 16px;
+        }
+        .magarzineTab{
+            width: 92%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            li{
+                font-size: 12px;
+            }
+        }
+        li{
+            .MagarzineList{
+                width: 92%;
+                margin: 0 auto;
+                grid-template-columns: 1fr;
+                gap:.8%;
+    
+                .MagarzineTxt{
+                    gap:8px;
+                    .newTag{
+                        font-size: 8px;
+                    }
+                    h3{
+                        font-size: 14px;
+                        margin-bottom: 22px;
+                    }
+                    span{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
