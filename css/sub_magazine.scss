@@ -1,3 +1,4 @@
+@import "./main2.scss";
 body{
     display: flex;
     flex-direction: column;
@@ -215,36 +216,48 @@ body{
 
 // 노트북에서 데스크탑
 @include desktopToLaptop {
-    // section{
-        
-
-    //     .magarzineTab{
-    //         width: 92%;
-    //         margin: 0 auto;
-    //     }
-    //     .MagarzineList{
-    //         width: 92%;
-    //         margin: 0 auto;
+    // body{
+    //     section{
+    //         width: 100%;
+    //         overflow: hidden;
+    //         .magarzineTab{
+    //             width: 92%;
+    //             margin: 0 auto;
+    //             margin-bottom: 50px;
+                
+    //         }
+    //         .MagarzineList{
+    //             width: 92%;
+    //             margin: 0 auto;
+    //             grid-template-columns: 1fr 1fr 1fr;
+    //             gap:2%;
+                
+    //         }
     //     }
     // }
+    
 }
 
 
 // 노트북
 @include laptop {
-    section{
-        width: 100%;
-        overflow: hidden;
-        .magarzineTab{
-            width: 92%;
-            margin: 0 auto;
-            margin-bottom: 50px;
-            
-        }
-        .MagarzineList{
-            width: 92%;
-            margin: 0 auto;
-            
+    body{
+        section{
+            width: 100%;
+            overflow: hidden;
+            .magarzineTab{
+                width: 92%;
+                margin: 0 auto;
+                margin-bottom: 50px;
+                
+            }
+            .MagarzineList{
+                width: 92%;
+                margin: 0 auto;
+                grid-template-columns: 1fr 1fr;
+                gap:2%;
+                
+            }
         }
     }
 }
@@ -252,83 +265,91 @@ body{
 
 // 태블릿에서 노트북
 @include laptopToTablet {
-    section{
-        width: 100%;
-        overflow: hidden;
-        .magarzineTab{
-            width: 92%;
-            margin: 0 auto;
-            margin-bottom: 50px;
-        }
-        .MagarzineList{
-            width: 92%;
-            margin: 0 auto;
-            grid-template-columns: 1fr 1fr;
-            gap:2%;
-            
+    body{
+        section{
+            width: 100%;
+            overflow: hidden;
+            .magarzineTab{
+                width: 92%;
+                margin: 0 auto;
+                margin-bottom: 50px;
+            }
+            .MagarzineList{
+                width: 92%;
+                margin: 0 auto;
+                grid-template-columns: 1fr 1fr;
+                gap:2%;
+                
+            }
         }
     }
+    
 }
 
 
 // 태블릿
 @include tablet {
-    section{
-        width: 100%;
-        overflow: hidden;
-        .magarzineTab{
-            width: 92%;
-            margin: 0 auto;
-            margin-bottom: 50px;
-        }
-        .MagarzineList{
-            width: 92%;
-            margin: 0 auto;
-            grid-template-columns: 1fr 1fr;
-            gap:2%;
+    body{
+        section{
+            width: 100%;
+            overflow: hidden;
+            .magarzineTab{
+                width: 92%;
+                margin: 0 auto;
+                margin-bottom: 50px;
+            }
+            .MagarzineList{
+                width: 92%;
+                margin: 0 auto;
+                grid-template-columns: 1fr 1fr;
+                gap:2%;
+            }
         }
     }
+    
 }
 
 
 // 모바일에서 태블릿
 @include tabletToMobile  {
-    section{
-        width: 100%;
-        overflow: hidden;
-        h1{
-            font-size:20px;
-            margin-bottom: 18px;
-        }
-        span.sub_title{
-            font-size: 16px;
-            margin-bottom: 50px;
-        }
-        .magarzineTab{
-            width: 92%;
-            margin: 0 auto;
-            margin-bottom: 50px;
-            li{
-                font-size: 12px;
+    body{
+        section{
+            width: 100%;
+            overflow: hidden;
+            h1{
+                font-size:20px;
+                margin-bottom: 18px;
             }
-        }
-        .MagarzineList{
-            width: 92%;
-            margin: 0 auto;
-            grid-template-columns: 1fr;
-            gap:.8%;
-            li{
-                .MagarzineTxt{
-                    gap: 8px;
-                    .newTag{
-                        font-size: 8px;
-                    }
-                    h3{
-                        font-size: 14px;
-                        margin-bottom: 22px;
-                    }
-                    span{
-                        font-size: 12px;
+            span.sub_title{
+                font-size: 16px;
+                margin-bottom: 50px;
+            }
+            .magarzineTab{
+                width: 92%;
+                margin: 0 auto;
+                margin-bottom: 50px;
+                li{
+                    font-size: 12px;
+                }
+            }
+            .MagarzineList{
+                width: 92%;
+                margin: 0 auto;
+                grid-template-columns: 1fr;
+                gap:.8%;
+                li{
+                    .MagarzineTxt{
+                        gap: 8px;
+                        .newTag{
+                            font-size: 8px;
+                        }
+                        h3{
+                            font-size: 14px;
+                            margin-bottom: 22px;
+                        }
+                        span{
+                            font-size: 12px;
+                        }
                     }
                 }
             }
@@ -339,6 +360,7 @@ body{
 
 // 모바일
 @include mobile  {
+   body{
     section{
         width: 100%;
         overflow: hidden;
@@ -379,4 +401,5 @@ body{
             }
         }
     }
+   }
 }

@@ -103,16 +103,98 @@
 }
 
 //노트북
-@include laptop {}
+@include laptop {
+    #footer{
+        #footer_inner{
+            width:92%;
+            display: flex;
+            margin: 0 auto;
+        }
+    }
+    
+}
     
 // 태블릿에서 노트북
-@include laptopToTablet {}
+@include laptopToTablet {
+    #footer{
+        #footer_inner{
+            width:92%;
+            display: flex;
+            margin: 0 auto;
+        }
+    }
+}
 
 // 태블릿
-@include tablet {}
+@include tablet {
+    #footer{
+        height: auto;
+        #footer_inner{
+            width:92%;
+            display: flex;
+            margin: 0 auto;
+            .footer_top{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .footer_bottom{
+                display: flex;
+                flex-direction: column;
+                gap:20px;
+            }
+        }
+    }
+}
 
 // 모바일에서 태블릿
-@include tabletToMobile  {}
+@include tabletToMobile  {
+    #footer{
+        height: auto;
+        #footer_inner{
+            width:92%;
+            display: flex;
+            margin: 0 auto;
+            .footer_top{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .footer_bottom{
+                display: flex;
+                flex-direction: column;
+                gap:20px;
+            }
+        }
+    }
+}
 
 // 모바일
-@include mobile  {}
+@include mobile  {
+    #footer{
+        height: auto;
+        #footer_inner{
+            width:92%;
+            display: flex;
+            margin: 0 auto;
+            font-size: 12px;
+            .footer_top{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding-bottom: 20px;
+            }
+            .footer_bottom{
+                display: flex;
+                flex-direction: column;
+                gap:20px;
+                padding-top: 20px;
+                .footer_inner_info{
+                    li{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

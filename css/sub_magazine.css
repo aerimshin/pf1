@@ -22,6 +22,330 @@ img {
 body {
   display: flex;
   flex-direction: column;
+  gap: 150px;
+}
+body section {
+  display: flex;
+  justify-content: center;
+}
+body section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body section div h2 {
+  font-size: 30px;
+}
+body #banner {
+  margin-top: 70px;
+  position: relative;
+  height: 800px;
+  overflow: hidden;
+  width: 100%;
+}
+body #banner .bannerLeft {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(17px);
+          backdrop-filter: blur(17px);
+  width: 360px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 156px;
+}
+body #banner .bannerLeft .bigLogo {
+  background: url(../img/logo1.png) no-repeat center center;
+  width: 130px;
+  height: 84px;
+  cursor: pointer;
+}
+body #banner .bannerLeft .bannerList {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+body #banner .bannerLeft .bannerList li {
+  color: #f0f0f0;
+  cursor: pointer;
+}
+body #banner .bannerLeft .bannerList li.select {
+  font-weight: bold;
+}
+body #banner .bannerLeft small {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  transform: rotate(-90deg);
+  font-weight: 300;
+}
+body #banner .bannerRight {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+body #banner .bannerRight .bannerImg {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+body #banner .bannerRight .bannerImg li {
+  width: 100%;
+  height: 100%;
+}
+body #banner .bannerRight .bannerImg li.b0 {
+  background: url(../img/banner5.jpg) no-repeat center center;
+}
+body #banner .bannerRight .bannerImg li.b1 {
+  background: url(../img/banner1.jpg) no-repeat center center;
+}
+body #banner .bannerRight .bannerImg li.b2 {
+  background: url(../img/banner2.jpg) no-repeat center center;
+}
+body #banner .bannerRight .bannerImg li.b3 {
+  background: url(../img/banner3.jpg) no-repeat center center;
+}
+body #banner .bannerRight .bannerImg li.b4 {
+  background: url(../img/banner4.jpg) no-repeat center center;
+}
+body #recommend div {
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+}
+body #recommend div .recommendTab {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 26px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+body #recommend div .recommendList {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+body #best {
+  position: relative;
+}
+body #best .best_inner {
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+body #best .best_inner h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+body #best .best_inner p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 50px;
+}
+body #best .best_inner ul.best_inner_list {
+  width: 100%;
+  position: relative;
+}
+body #best .best_inner ul.best_inner_list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #best .best_inner ul.best_inner_list li {
+  width: 23.5%;
+  margin-left: 2%;
+  float: left;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+body #best .best_inner ul.best_inner_list li img {
+  margin-bottom: 30px;
+  transition-duration: 0.5s;
+  width: 100%;
+}
+body #best .best_inner ul.best_inner_list li h3 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+body #best .best_inner ul.best_inner_list li p {
+  color: #c80a1e;
+  margin-bottom: 0;
+  text-align: center;
+}
+body #best .best_inner ul.best_inner_list li:nth-child(4n+1) {
+  margin-left: 0;
+}
+body #middle_banner {
+  width: 100%;
+  height: 290px;
+  background: url(../img/middle_banner.jpg) no-repeat center center;
+}
+body #middle_banner div {
+  width: 1200px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+body #middle_banner div a {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+}
+body #sns {
+  background: #f0f0f0;
+  padding: 75px 0;
+  box-sizing: border-box;
+}
+body #sns div {
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+body #sns div h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+body #sns div span {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 50px;
+}
+body #sns div ul {
+  display: flex;
+  flex-direction: row;
+}
+body #info {
+  position: relative;
+  padding: 70px;
+  overflow: hidden;
+  margin-top: 50px;
+}
+body #info .info_inner {
+  position: relative;
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+body #info .info_inner .info_text {
+  position: relative;
+  width: 380px;
+  height: 500px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+body #info .info_inner .info_text h2 {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: left;
+  padding-top: 20px;
+}
+body #info .info_inner .info_text h3 {
+  font-size: 36px;
+  font-weight: 300;
+  text-align: left;
+  margin-top: 40px;
+}
+body #info .info_inner .info_text h3 span {
+  color: #C80A1E;
+}
+body #info .info_inner .info_text p {
+  font-size: 18px;
+  font-weight: 400;
+}
+body #info .info_inner .info_text p:nth-child(3) {
+  margin-top: 70px;
+}
+body #info .info_inner .info_text p:nth-child(4) {
+  margin-top: 20px;
+}
+body #info .info_inner .info-wrap {
+  position: absolute;
+  left: 380px;
+  height: 500px;
+  top: 0;
+}
+body #info .info_inner .info-wrap .info_list {
+  position: relative;
+  width: 2157px;
+  overflow: hidden;
+}
+body #info .info_inner .info-wrap .info_list li {
+  float: left;
+  margin-right: 2%;
+  width: 32%;
+}
+body #info .info_inner .info-wrap .info_list li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+body #info .info_inner .info-wrap .info_list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #info .info_inner .info-wrap .info_list:last-child {
+  margin-right: 0;
+}
+body #info .info_inner .info_control {
+  width: 1200px;
+  margin: 50px auto;
+  height: 60px;
+}
+body #info .info_inner .info_control ul {
+  width: 540px;
+  margin-left: 380px;
+}
+body #info .info_inner .info_control ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #info .info_inner .info_control ul li {
+  float: left;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  width: 180px;
+  text-align: center;
+  border-bottom: 3px solid #f0f0f0;
+  line-height: 40px;
+}
+body #info .info_inner .info_control ul li.select {
+  border-bottom: 3px solid #C80A1E;
+}
+body #info .info_inner .info_control ul li div {
+  background-color: #f0f0f0;
+  width: 180px;
+  height: 3px;
+  margin-top: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 body section {
   width: 1200px;
@@ -200,31 +524,33 @@ body section .MagarzineList li .MagarzineTxt .bestTag {
 }
 
 @media (min-width: 1024px) and (max-width: 1499px) {
-  section {
+  body section {
     width: 100%;
     overflow: hidden;
   }
-  section .magarzineTab {
+  body section .magarzineTab {
     width: 92%;
     margin: 0 auto;
     margin-bottom: 50px;
   }
-  section .MagarzineList {
+  body section .MagarzineList {
     width: 92%;
     margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
   }
 }
 @media (min-width: 960px) and (max-width: 1023px) {
-  section {
+  body section {
     width: 100%;
     overflow: hidden;
   }
-  section .magarzineTab {
+  body section .magarzineTab {
     width: 92%;
     margin: 0 auto;
     margin-bottom: 50px;
   }
-  section .MagarzineList {
+  body section .MagarzineList {
     width: 92%;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr;
@@ -232,16 +558,16 @@ body section .MagarzineList li .MagarzineTxt .bestTag {
   }
 }
 @media (min-width: 720px) and (max-width: 959px) {
-  section {
+  body section {
     width: 100%;
     overflow: hidden;
   }
-  section .magarzineTab {
+  body section .magarzineTab {
     width: 92%;
     margin: 0 auto;
     margin-bottom: 50px;
   }
-  section .MagarzineList {
+  body section .MagarzineList {
     width: 92%;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr;
@@ -249,82 +575,82 @@ body section .MagarzineList li .MagarzineTxt .bestTag {
   }
 }
 @media (min-width: 535px) and (max-width: 719px) {
-  section {
+  body section {
     width: 100%;
     overflow: hidden;
   }
-  section h1 {
+  body section h1 {
     font-size: 20px;
     margin-bottom: 18px;
   }
-  section span.sub_title {
+  body section span.sub_title {
     font-size: 16px;
     margin-bottom: 50px;
   }
-  section .magarzineTab {
+  body section .magarzineTab {
     width: 92%;
     margin: 0 auto;
     margin-bottom: 50px;
   }
-  section .magarzineTab li {
+  body section .magarzineTab li {
     font-size: 12px;
   }
-  section .MagarzineList {
+  body section .MagarzineList {
     width: 92%;
     margin: 0 auto;
     grid-template-columns: 1fr;
     gap: 0.8%;
   }
-  section .MagarzineList li .MagarzineTxt {
+  body section .MagarzineList li .MagarzineTxt {
     gap: 8px;
   }
-  section .MagarzineList li .MagarzineTxt .newTag {
+  body section .MagarzineList li .MagarzineTxt .newTag {
     font-size: 8px;
   }
-  section .MagarzineList li .MagarzineTxt h3 {
+  body section .MagarzineList li .MagarzineTxt h3 {
     font-size: 14px;
     margin-bottom: 22px;
   }
-  section .MagarzineList li .MagarzineTxt span {
+  body section .MagarzineList li .MagarzineTxt span {
     font-size: 12px;
   }
 }
 @media (min-width: 335px) and (max-width: 534px) {
-  section {
+  body section {
     width: 100%;
     overflow: hidden;
   }
-  section h1 {
+  body section h1 {
     font-size: 20px;
   }
-  section span.sub_title {
+  body section span.sub_title {
     font-size: 16px;
   }
-  section .magarzineTab {
+  body section .magarzineTab {
     width: 92%;
     margin: 0 auto;
     margin-bottom: 50px;
   }
-  section .magarzineTab li {
+  body section .magarzineTab li {
     font-size: 12px;
   }
-  section li .MagarzineList {
+  body section li .MagarzineList {
     width: 92%;
     margin: 0 auto;
     grid-template-columns: 1fr;
     gap: 0.8%;
   }
-  section li .MagarzineList .MagarzineTxt {
+  body section li .MagarzineList .MagarzineTxt {
     gap: 8px;
   }
-  section li .MagarzineList .MagarzineTxt .newTag {
+  body section li .MagarzineList .MagarzineTxt .newTag {
     font-size: 8px;
   }
-  section li .MagarzineList .MagarzineTxt h3 {
+  body section li .MagarzineList .MagarzineTxt h3 {
     font-size: 14px;
     margin-bottom: 22px;
   }
-  section li .MagarzineList .MagarzineTxt span {
+  body section li .MagarzineList .MagarzineTxt span {
     font-size: 12px;
   }
 }/*# sourceMappingURL=sub_magazine.css.map */
