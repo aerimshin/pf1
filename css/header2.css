@@ -440,10 +440,8 @@ body #info .info_inner .info_control ul li div {
 }
 
 @media (min-width: 1024px) and (max-width: 1499px) {
-  #header .gnb {
-    position: relative;
-  }
   #header {
+    background-color: #f294f2;
     position: fixed;
     height: 80px;
     z-index: 9999;
@@ -452,14 +450,14 @@ body #info .info_inner .info_control ul li div {
     top: 0;
     background-color: #fff;
   }
-  #header .gnb .top_logo2 {
+  #header .gnb .gnb_list {
+    display: none;
+  }
+  #header .gnb .top_logo {
     display: block;
     top: 14px;
     position: absolute;
     margin-left: 50px;
-  }
-  #header .gnb .gnb_list {
-    display: none;
   }
   #header .util {
     display: none;
@@ -561,47 +559,24 @@ body #info .info_inner .info_control ul li div {
 }
 @media (min-width: 335px) and (max-width: 534px) {
   #header {
-    height: 80px;
+    height: 60px;
     width: 100%;
     position: fixed;
     z-index: 9999;
     background-color: #fff;
+    display: flex;
+    flex-direction: row;
   }
-  #header .gnb {
-    position: relative;
+  #header .header_inner {
+    width: 100%;
   }
-  #header .gnb .top_logo2 {
-    display: block;
-    top: 14px;
-    position: absolute;
-    margin-left: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  #header .gnb .gnb_list {
+  #header .header_inner .gnb {
     display: none;
   }
-  #header .gnb .util {
-    display: none;
-  }
-  #header .gnb > ul > li > ul {
-    background-color: #FFF;
-    display: none;
-  }
-  #header .gnb > ul > li > ul a {
+  #header .header_inner .mob_btn {
     display: block;
-    text-align: center;
-    line-height: 40px;
-    font-size: 14px;
-    color: #181818;
   }
-  #header .mob_btn {
-    display: block;
-    left: 50px;
-    top: 27.5px;
-    position: absolute;
-  }
-  #header .util {
+  #header .header_inner .util {
     display: none;
   }
   #header .mob_gnb {
@@ -622,21 +597,21 @@ body #info .info_inner .info_control ul li div {
     margin: 0 auto;
     text-align: center;
   }
-  #header .mob_gnb .gnb_list > li {
+  #header .mob_gnb .gnb_list li {
     border-bottom: 1px solid #fff;
     margin-bottom: 20px;
   }
-  #header .mob_gnb .gnb_list > li > a {
+  #header .mob_gnb .gnb_list li a {
     font-size: 20px;
     color: #aaa;
     text-align: center;
   }
-  #header .mob_gnb > ul > li > ul {
+  #header .mob_gnb .gnb_list li ul {
     display: none;
     border-bottom: 1px solid #fff;
     text-align: center;
   }
-  #header .mob_gnb > ul > li > .gnb_inner > li > a {
+  #header .mob_gnb .gnb_list li .gnb_inner li a {
     display: block;
     text-align: center;
     line-height: 30px;
