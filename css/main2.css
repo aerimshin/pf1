@@ -655,6 +655,9 @@ body #best .best_inner ul.best_inner_list li p {
 body #best .best_inner ul.best_inner_list li:nth-child(4n+1) {
   margin-left: 0;
 }
+body #lifeStory {
+  background: #FDFAF0;
+}
 body #middle_banner {
   width: 100%;
   height: 290px;
