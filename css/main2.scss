@@ -8,16 +8,18 @@ $bg-white:#FFF;
 $point-color:#C80A1E;
 
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
-@import "./_mixin";
-
+@import "./_mixin.scss";
+@import "./_variable.scss";
+@import "./header2.scss";
+@import "./footer.scss";
 
 *{margin:0; padding:0; color:$black-color; font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
 li{list-style: none;}
 a{text-decoration: none;}
 img{border:none; display: block;}
+ 
 
-
-body{
+body{  
     display: flex;
     flex-direction: column;
     gap: 150px;
@@ -193,12 +195,15 @@ body{
             display: flex;
             position: relative;
             justify-content: center;
-            a{
+            a.banner_more_btn{
                 position: absolute;
                 bottom:25px;
-                left:0;
+                left:70px;
                 display: flex;
                 flex-direction: row;
+                &:hover{
+                 font-weight: 600;   
+                }
             }
         }
 
@@ -228,9 +233,12 @@ body{
     #info{
         position: relative; padding:70px; overflow: hidden; margin-top: 50px;
         .info_inner{
-            position: relative; width: 1200px; display: flex; justify-content:center;
+            position: relative; display: flex; justify-content:flex-start;
+            flex-direction: row; gap:20px;
             .info_text{
-                position: relative; width:380px; height:500px; padding: 20px; box-sizing: border-box;
+                // position: relative;
+                min-width:400px; 
+                
                 h2{
                     font-size: 22px; font-weight: 700;text-align: left;padding-top: 20px;
                 }
@@ -251,12 +259,15 @@ body{
                 }
            
             } 
-            .info-wrap{
-                position: absolute; left: 380px;  height: 500px; top:0;
+            .info_wrap{
+                overflow: auto;
+                //width:100%;
                 .info_list{
-                    position: relative; width:2157px; overflow: hidden;
-                    li{
-                        float: left; margin-right: 2%; width:32%;
+                    display: flex; flex-wrap:wrap; flex-direction: row;
+                     width:669px*3;
+                    
+                    li{ 
+                        max-width: 669px; height: auto;
                         a{
                             width: 100%; height: 100%; display: block;
                         }
@@ -264,13 +275,11 @@ body{
                     &::after{
                         content: ''; display: block; clear: both;
                     }
-                    &:last-child{
-                        margin-right: 0;
-                    }
                 }
             }
             .info_control{
-                width: 1200px; margin: 50px auto; height: 60px;
+                width: 1200px;
+                position:absolute; bottom:-50px; left:0;
                 ul{
                     width: 540px; margin-left: 380px;
                     &::after{

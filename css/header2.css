@@ -281,12 +281,15 @@ body #info .info_inner .info_text p:nth-child(4) {
   margin-top: 20px;
 }
 body #info .info_inner .info-wrap {
-  position: absolute;
-  left: 380px;
-  height: 500px;
-  top: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
 }
 body #info .info_inner .info-wrap .info_list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   position: relative;
   width: 2157px;
   overflow: hidden;
@@ -618,4 +621,4 @@ body #info .info_inner .info_control ul li div {
     color: #181818;
     font-size: 13px;
   }
-}/*# sourceMappingURL=header2.css.map */
+}
