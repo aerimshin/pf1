@@ -601,6 +601,42 @@ body #recommend div .recommendList {
   flex-direction: row;
   gap: 15px;
 }
+body #earlyBird {
+  background: url(../img/earlybird_background.gif) no-repeat top center;
+}
+body #earlyBird > div {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+  position: relative;
+}
+body #earlyBird > div .earlyBird-txt {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 33px;
+  left: 470px;
+  gap: 15px;
+}
+body #earlyBird > div .earlyBird-txt > h2 {
+  margin-bottom: 17px;
+}
+body #earlyBird > div .earlyBird-txt > h2 span.point_color {
+  color: #C80A1E;
+}
+body #earlyBird > div .earlyBird-txt > h3 small.point_color {
+  color: #C80A1E;
+  margin-left: 20px;
+}
+body #earlyBird > div .earlyBirdList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 62px;
+}
+body #earlyBird .mob_earlyBird {
+  display: none;
+}
 body #best {
   position: relative;
 }

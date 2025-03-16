@@ -151,6 +151,48 @@ body{
         }
         
     }
+
+    #earlyBird{
+        background: url(../img/earlybird_background.gif) no-repeat top center;
+        
+        > div{
+            width: 1200px;
+            margin: 0 auto;
+            padding-top: 100px;
+            position: relative;
+            .earlyBird-txt{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                top:33px;
+                left: 470px;
+                gap:15px;
+                > h2{
+                    margin-bottom: 17px;
+                    span.point_color{
+                        color:$point-color;
+                    }
+                }
+                > h3 {
+                    small.point_color{
+                        color:$point-color;
+                        margin-left: 20px;
+                    } 
+                }
+            }
+            .earlyBirdList{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap:62px;
+            }
+    
+        }
+        .mob_earlyBird{
+            display:none;
+        }
+    }
+    
     #best{
         position: relative;
         .best_inner{
