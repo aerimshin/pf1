@@ -144,12 +144,17 @@ body{
                 display: flex;
                 flex-direction: row;
                 gap:15px;
-                li{
-                   
-                }
+            
             }
         }
         
+    }
+
+
+    #earlyBird{
+        .mob_earlyBird{
+            display: none;
+        }
     }
 
     #earlyBird{
@@ -192,7 +197,7 @@ body{
             display:none;
         }
     }
-    
+
     #best{
         position: relative;
         .best_inner{
@@ -361,7 +366,14 @@ body{
 @include laptopToTablet {}
 
 // 태블릿
-@include tablet {}
+@include tablet {
+
+    #earlyBird{
+        .mob_earlyBird{
+            display: flex;
+        }
+    }
+}
 
 // 모바일에서 태블릿
 @include tabletToMobile  {}
